@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Instagram, Linkedin, Mail } from "lucide-react"
 
 export const skills = [
     "React",
@@ -20,9 +20,10 @@ export const skills = [
 ]
 
 export const socials = [
-    { icon: Github, tooltip: "Visit my GitHub" },
-    { icon: Linkedin, tooltip: "Visit my LinkedIn" },
-    { icon: Mail, tooltip: "Send me an Email" },
+    { icon: Github, tooltip: "Visit my GitHub", link: "https://github.com/EnzoCaetano015" },
+    { icon: Linkedin, tooltip: "Visit my LinkedIn", link:"https://www.linkedin.com/in/enzo-caetano-814736290/" },
+    { icon: Instagram, tooltip: "Visit my Instagram", link: "https://www.instagram.com/caetanokskj/" },
+    { icon: Mail, tooltip: "Send me an Email", link: ""}
 ]
 
 export const timelineItems = [
