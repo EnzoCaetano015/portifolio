@@ -1,7 +1,8 @@
+import clsx from "clsx"
 import { Badge } from "../ui/badge"
 import { TimelineProps } from "./timeline.types"
 
-export const Timeline = ({ items }: TimelineProps) => {
+export const Timeline = ({ items, theme }: TimelineProps) => {
     const currentYear = new Date().getFullYear()
 
     return (
@@ -13,26 +14,45 @@ export const Timeline = ({ items }: TimelineProps) => {
                 return (
                     <div
                         key={index}
-                        className="flex flex-row gap-8"
+                        className="mb-8 last:mb-0"
                     >
-                        <div className="w-40 flex-shrink-0">
-                            <p>{displayDate}</p>
-                        </div>
-
-                        <div className="flex flex-col gap-2">
-                            <span>
-                                {item.position} · {item.company}
-                            </span>
-
-                            {item.description && <p>{item.description}</p>}
-
-                            {item.technologies && (
-                                <div className="flex flex-row gap-2 flex-wrap">
-                                    {item.technologies.map((tech) => (
-                                        <Badge key={tech}>{tech}</Badge>
-                                    ))}
-                                </div>
+                        <div
+                            className={clsx(
+                                "flex flex-col lg:flex-row lg:gap-20 gap-4",
+                                "items-center text-center lg:items-start lg:text-left"
                             )}
+                        >
+                            <div className="md:w-40 flex-shrink-0">
+                                <p className="font-mono">{displayDate}</p>
+                            </div>
+
+                            <div className="flex flex-col gap-4">
+                                <span>
+                                    {item.position} · {item.company}
+                                </span>
+
+                                {item.description && (
+                                    <p className="text-sm md:text-base">{item.description}</p>
+                                )}
+
+                                {item.technologies && (
+                                 <div className="flex flex-row flex-wrap gap-2 justify-center lg:justify-start">
+                                        {item.technologies.map((tech) => (
+                                            <Badge
+                                                key={tech}
+                                                className={clsx(
+                                                    "rounded-md transition-colors cursor-pointer",
+                                                    theme === "light"
+                                                        ? "bg-gray-800 text-gray-100 hover:scale-105"
+                                                        : "bg-gray-100 text-gray-900 hover:scale-105"
+                                                )}
+                                            >
+                                                {tech}
+                                            </Badge>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     </div>
                 )

@@ -8,4 +8,5 @@ type TimelineItem = {
 
 export interface TimelineProps {
     items: TimelineItem[]
+    theme?: string
 }

@@ -19,9 +19,10 @@ import { useHome } from "./Home.hook"
 import { Textarea } from "@/components/ui/textarea"
 import { Lightbulb, LightbulbOff } from "lucide-react"
 import clsx from "clsx"
+import { Spinner } from "@/components/ui/spinner"
 
 export default function HomePage() {
-    const { form, theme, setTheme } = useHome()
+    const { form, theme, setTheme, handleEnviarEmail, loading } = useHome()
 
     return (
         <div className="relative flex flex-col md:flex-row min-h-screen">
@@ -74,7 +75,7 @@ export default function HomePage() {
                 </div>
             </main>
 
-            <div className="pointer-events-none fixed top-0 right-0 hidden md:block w-[60%] h-15 bg-gradient-to-b from-background/90 to-transparent backdrop-blur-sm z-20 mr-5" />
+            <div className="pointer-events-none fixed top-0 right-0 hidden md:block w-[60%] h-15 md:h-10 bg-gradient-to-b from-background/90 to-transparent backdrop-blur-sm z-20 mr-5" />
 
             <section className="md:ml-[40%] flex-1 p-8 overflow-y-auto h-auto h-screen flex flex-col gap-16 md:text-left">
                 <section className="flex flex-col gap-8 max-w-3xl md:p-8 mt-10">
@@ -83,7 +84,7 @@ export default function HomePage() {
                     </h2>
 
                     <div className="flex flex-col gap-4">
-                        <p className="text-pretty">
+                        <p className="text-pretty ">
                             I&apos;m a full-stack developer passionate about creating accessible,
                             pixel-perfect user interfaces that blend thoughtful design with robust
                             engineering. My favorite work lies at the intersection of design and
@@ -107,18 +108,18 @@ export default function HomePage() {
                     </div>
 
                     <div className="flex flex-col gap-4">
-                        <h3 className="text-sm font-mono text-muted-foreground mb-4 tracking-wider">
+                        <h3 className="text-sm font-mono text-muted-foreground mb-4 tracking-wider ">
                             TECHNOLOGIES
                         </h3>
-                        <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <div className="flex flex-wrap gap-4">
                             {skills.map((skill) => (
                                 <Badge
                                     key={skill}
                                     className={clsx(
                                         "px-2 py-0.5 text-base font-medium rounded-md transition-colors cursor-pointer",
                                         theme === "light"
-                                            ? "bg-gray-100 text-gray-900 hover:bg-gray-900 hover:text-white"
-                                            : "bg-gray-800 text-gray-100 hover:bg-white hover:text-black"
+                                            ? "bg-gray-100 text-gray-900 hover:bg-gray-900 hover:text-white hover:scale-105"
+                                            : "bg-gray-800 text-gray-100 hover:bg-white hover:text-black hover:scale-105"
                                     )}
                                 >
                                     {skill}
@@ -128,18 +129,26 @@ export default function HomePage() {
                     </div>
                 </section>
 
-                <section className="flex flex-col gap-8 max-w-3xl p-8  mt-10">
-                    <h2 className="text-4xl font-bold text-balance ">Where I&apos;ve Worked</h2>
+                <section className="flex flex-col gap-8 max-w-3xl md:p-8 mt-10">
+                    <h2 className="text-4xl font-bold text-balance text-center lg:text-start">
+                        Where I&apos;ve Worked
+                    </h2>
 
-                    <Timeline items={timelineItems} />
+                    <Timeline
+                        items={timelineItems}
+                        theme={theme}
+                    />
                 </section>
 
                 <section className="flex flex-col gap-8 max-w-3xl p-8  mt-10">
-                    <h2 className="text-4xl font-bold text-balance">Projects</h2>
+                    <h2 className="text-4xl font-bold text-balance text-center lg:text-start">
+                        Projects
+                    </h2>
 
                     <div className="flex flex-col gap-4">
                         {projects.map((project) => (
                             <CardProject
+                                theme={theme}
                                 key={project.title}
                                 {...project}
                             />
@@ -147,7 +156,7 @@ export default function HomePage() {
                     </div>
                 </section>
 
-                <section className="flex flex-col gap-8 max-w-3xl md:p-8">
+                <section className="flex flex-col gap-8 max-w-3xl md:p-8 lg:mt-10 lg:mb-10">
                     <h2 className="text-4xl font-bold text-balance ">Let&apos;s work together</h2>
 
                     <p className="text-pretty">
@@ -157,7 +166,7 @@ export default function HomePage() {
 
                     <Form {...form}>
                         <form
-                            onSubmit={form.handleSubmit(() => {})}
+                            onSubmit={handleEnviarEmail}
                             className="flex flex-col gap-4"
                         >
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -239,15 +248,16 @@ export default function HomePage() {
                                 <Button
                                     type="submit"
                                     className="w-full md:w-auto"
+                                    disabled={loading}
                                 >
-                                    Send Message
+                                    {loading && <Spinner />} Send Message
                                 </Button>
                             </div>
                         </form>
                     </Form>
                 </section>
             </section>
-            <div className="pointer-events-none fixed bottom-0 right-0 hidden md:block w-[60%] h-15 bg-gradient-to-t from-background/90 to-transparent backdrop-blur-sm z-20 mr-5" />
+            <div className="pointer-events-none fixed bottom-0 right-0 hidden md:block w-[60%] h-15 md:h-10 bg-gradient-to-t from-background/90 to-transparent backdrop-blur-sm z-20 mr-5" />
         </div>
     )
 }

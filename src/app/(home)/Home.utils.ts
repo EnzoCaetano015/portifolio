@@ -21,9 +21,13 @@ export const skills = [
 
 export const socials = [
     { icon: Github, tooltip: "Visit my GitHub", link: "https://github.com/EnzoCaetano015" },
-    { icon: Linkedin, tooltip: "Visit my LinkedIn", link:"https://www.linkedin.com/in/enzo-caetano-814736290/" },
+    {
+        icon: Linkedin,
+        tooltip: "Visit my LinkedIn",
+        link: "https://www.linkedin.com/in/enzo-caetano-814736290/",
+    },
     { icon: Instagram, tooltip: "Visit my Instagram", link: "https://www.instagram.com/caetanokskj/" },
-    { icon: Mail, tooltip: "Send me an Email", link: ""}
+    { icon: Mail, tooltip: "Send me an Email", link: "" },
 ]
 
 export const timelineItems = [
@@ -54,7 +58,7 @@ export const projects = [
         title: "Nexus Dashboard",
         description:
             "Admin dashboard built with React, TypeScript, and FastAPI for managing academic and corporate projects.",
-        image: "/images/nexus-dashboard.png",
+        image: "/images/transferir.png",
         link: {
             url: "https://nexus.caetanodev.com",
             github: "https://github.com/caetanodev/nexus-dashboard",
@@ -62,25 +66,25 @@ export const projects = [
         technologies: ["React", "TypeScript", "FastAPI", "TailwindCSS"],
     },
     {
-        title: "Mimimi AI",
+        title: "MiMiMi",
         description:
-            "Emotional analysis platform using AI to generate word clouds and track student well-being anonymously.",
-        image: "/images/mimimi-ai.png",
+            "Admin dashboard built with React, TypeScript, and FastAPI for managing academic and corporate projects.",
+        image: "/images/transferir.png",
         link: {
-            url: "https://mimimi.caetanodev.com",
-            github: "https://github.com/caetanodev/mimimi-ai",
+            url: "https://nexus.caetanodev.com",
+            github: "https://github.com/caetanodev/nexus-dashboard",
         },
-        technologies: ["Python", "FastAPI", "React", "Cloudinary"],
+        technologies: ["React", "TypeScript", "FastAPI", "TailwindCSS"],
     },
     {
-        title: "Pacventura",
+        title: "PacVentura",
         description:
-            "Interactive storybook project featuring 3D characters and educational content for children.",
-        image: "/images/pacventura.png",
+            "Admin dashboard built with React, TypeScript, and FastAPI for managing academic and corporate projects.",
+        image: "/images/transferir.png",
         link: {
-            url: "https://pacventura.com",
-            github: "https://github.com/caetanodev/pacventura",
+            url: "https://nexus.caetanodev.com",
+            github: "https://github.com/caetanodev/nexus-dashboard",
         },
-        technologies: ["Next.js", "Three.js", "Styled-Components", "Node.js"],
+        technologies: ["React", "TypeScript", "FastAPI", "TailwindCSS"],
     },
 ]
