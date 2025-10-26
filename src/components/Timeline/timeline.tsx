@@ -1,6 +1,7 @@
 import clsx from "clsx"
 import { Badge } from "../ui/badge"
 import { TimelineProps } from "./timeline.types"
+import { Separator } from "../ui/separator"
 
 export const Timeline = ({ items, theme }: TimelineProps) => {
     const currentYear = new Date().getFullYear()
@@ -18,12 +19,20 @@ export const Timeline = ({ items, theme }: TimelineProps) => {
                     >
                         <div
                             className={clsx(
-                                "flex flex-col lg:flex-row lg:gap-20 gap-4",
-                                "items-center text-center lg:items-start lg:text-left"
+                                "flex flex-col xl:flex-row xl:gap-20 gap-4",
+                                "items-center text-center xl:items-start xl:text-left"
                             )}
                         >
-                            <div className="md:w-40 flex-shrink-0">
+                            <div className="md:w-40 flex-shrink-0 flex flex-col items-center">
+                                <div className="flex h-0 xl:h-40 py-2 align-center justify-center">
+                                    <Separator orientation="vertical" />
+                                </div>
+
                                 <p className="font-mono">{displayDate}</p>
+
+                                <div className="flex h-10 xl:h-40 py-2 align-center justify-center">
+                                    <Separator orientation="vertical" />
+                                </div>
                             </div>
 
                             <div className="flex flex-col gap-4">
@@ -36,7 +45,7 @@ export const Timeline = ({ items, theme }: TimelineProps) => {
                                 )}
 
                                 {item.technologies && (
-                                 <div className="flex flex-row flex-wrap gap-2 justify-center lg:justify-start">
+                                    <div className="flex flex-row flex-wrap gap-2 justify-center xl:justify-start">
                                         {item.technologies.map((tech) => (
                                             <Badge
                                                 key={tech}

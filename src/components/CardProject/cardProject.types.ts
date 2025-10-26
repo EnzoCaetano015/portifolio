@@ -3,8 +3,9 @@ export interface CardProjectProps {
     description: string;
     image: string;
     link: {
-        url: string;
-        github: string;
+        url: string | null;
+        github: string | null;
+        outro: string | null;
     };
     technologies: string[];
     theme?: string

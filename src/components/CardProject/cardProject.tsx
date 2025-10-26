@@ -14,16 +14,17 @@ export const CardProject = ({
 }: CardProjectProps) => {
     return (
         <div
-            className="flex flex-col lg:flex-row gap-8 p-4 pl-0
-        items-center text-center lg:items-start lg:text-left"
+            className="flex flex-col lg:flex-row gap-10 p-4 pl-0
+        items-center text-center justify-center lg:items-start lg:text-left"
         >
             <Image
                 width={205}
                 height={105}
                 src={image}
                 alt={title}
-                className="rounded-md object-cover h-32 w-48 lg:h-32 lg:w-48 opacity-50 hover:opacity-100 transition-opacity"
+                className="rounded-md object-cover h-32 w-55 lg:mt-10 opacity-50 hover:opacity-100 transition-opacity"
             />
+
             <div className="flex flex-col gap-4">
                 <div>
                     <h3 className="text-lg font-semibold">{title}</h3>
@@ -47,30 +48,48 @@ export const CardProject = ({
                 </div>
 
                 <div className="flex flex-row gap-8 justify-center lg:justify-start">
-                    <a
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Button
-                            variant="link"
-                            className="p-0"
+                    {link.url && (
+                        <a
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            View Project
-                        </Button>
-                    </a>
-                    <a
-                        href={link.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Button
-                            variant="link"
-                            className="p-0"
+                            <Button
+                                variant="link"
+                                className="p-0"
+                            >
+                                View Project
+                            </Button>
+                        </a>
+                    )}
+                    {link.github && (
+                        <a
+                            href={link.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            View Code
-                        </Button>
-                    </a>
+                            <Button
+                                variant="link"
+                                className="p-0"
+                            >
+                                View Code
+                            </Button>
+                        </a>
+                    )}
+                    {link.outro && (
+                        <a
+                            href={link.outro}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Button
+                                variant="link"
+                                className="p-0"
+                            >
+                                View More
+                            </Button>
+                        </a>
+                    )}
                 </div>
             </div>
         </div>

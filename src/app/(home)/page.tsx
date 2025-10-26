@@ -22,7 +22,7 @@ import clsx from "clsx"
 import { Spinner } from "@/components/ui/spinner"
 
 export default function HomePage() {
-    const { form, theme, setTheme, handleEnviarEmail, loading } = useHome()
+    const { form, theme, setTheme, handleEnviarEmail, loading, frase } = useHome()
 
     return (
         <div className="relative flex flex-col md:flex-row min-h-screen">
@@ -51,8 +51,7 @@ export default function HomePage() {
                     </div>
 
                     <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-md text-pretty mx-auto md:mx-0">
-                        I craft pixel-perfect digital experiences that blend thoughtful design with
-                        robust engineering.
+                        {frase}
                     </p>
                 </div>
 
@@ -78,32 +77,41 @@ export default function HomePage() {
             <div className="pointer-events-none fixed top-0 right-0 hidden md:block w-[60%] h-15 md:h-10 bg-gradient-to-b from-background/90 to-transparent backdrop-blur-sm z-20 mr-5" />
 
             <section className="md:ml-[40%] flex-1 p-8 overflow-y-auto h-auto h-screen flex flex-col gap-16 md:text-left">
-                <section className="flex flex-col gap-8 max-w-3xl md:p-8 mt-10">
+                <section className="flex flex-col gap-8 max-w-3xl md:p-8">
                     <h2 className="text-4xl font-bold text-balance">
-                        Building the web, one pixel at a time
+                        Code with soul, projects with truth.
                     </h2>
 
                     <div className="flex flex-col gap-4">
                         <p className="text-pretty ">
-                            I&apos;m a full-stack developer passionate about creating accessible,
-                            pixel-perfect user interfaces that blend thoughtful design with robust
-                            engineering. My favorite work lies at the intersection of design and
-                            development, creating experiences that not only look great but are
-                            meticulously built for performance and usability.
+                            Full-stack developer specialized in building performant, scalable, and
+                            visually refined digital products. Skilled across front-end and back-end
+                            stacks, including React, Next.js, TypeScript, Laravel, .NET, Docker, and AWS,
+                            with strong understanding of UI design, infrastructure, and microservices.
                         </p>
 
                         <p className="text-pretty">
-                            With a keen eye for detail and a commitment to quality, I strive to bring
-                            designs to life with precision, ensuring every element is perfectly aligned
-                            and every interaction is seamless. Whether it&apos;s crafting responsive
-                            layouts or optimizing front-end performance, I am dedicated to delivering
-                            exceptional digital experiences that resonate with users.
+                            At Tecnologia Unica, developed a full insurance management platform
+                            integrating InsureMo APIs, C# microservices, and a React-based BFF layer,
+                            managing CI/CD through Azure DevOps and AWS deployment. At Agência M, led the
+                            modernization of legacy systems, migrating from WordPress and PHP to Flutter
+                            and React Native for seamless mobile and web experiences. Earlier at
+                            Metalúrgica Sete de Setembro, maintained network and server reliability,
+                            optimizing AD and VPN systems.
                         </p>
 
                         <p className="text-pretty">
-                            Let&apos;s collaborate to build web applications that are not only visually
-                            stunning but also functionally robust, creating a lasting impact on users
-                            through thoughtful design and meticulous development.
+                            Creator of projects such as Nexus, a sponsorship platform connecting
+                            ETEC/FATEC students and companies; MiMiMi, an AI-based emotional analysis
+                            tool for schools; and the FETEPS app, a digital fair platform for educational
+                            innovation.
+                        </p>
+
+                        <p className="text-pretty">
+                            Driven by precision and usability, I merge thoughtful design with robust
+                            engineering to deliver interfaces that perform flawlessly across
+                            environments. Always focused on clarity, scalability, and meaningful impact
+                            through technology.
                         </p>
                     </div>
 
@@ -156,7 +164,7 @@ export default function HomePage() {
                     </div>
                 </section>
 
-                <section className="flex flex-col gap-8 max-w-3xl md:p-8 lg:mt-10 lg:mb-10">
+                <section className="flex flex-col gap-8 max-w-3xl md:p-8 lg:mt-10 lg:mb-10" id="email">
                     <h2 className="text-4xl font-bold text-balance ">Let&apos;s work together</h2>
 
                     <p className="text-pretty">
