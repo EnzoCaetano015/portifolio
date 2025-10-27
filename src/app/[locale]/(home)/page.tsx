@@ -42,7 +42,7 @@ export default function HomePage() {
             <Tooltip>
                 <TooltipTrigger asChild>
                     <Button
-                        className="absolute top-8 right-8 md:left-8 md:right-auto z-50"
+                        className="absolute top-8 right-25 md:left-8 md:right-auto z-50"
                         size={"icon-lg"}
                         onClick={handleToggleLanguage}
                     >
