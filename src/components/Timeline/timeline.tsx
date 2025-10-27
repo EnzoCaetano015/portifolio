@@ -2,15 +2,19 @@ import clsx from "clsx"
 import { Badge } from "../ui/badge"
 import { TimelineProps } from "./timeline.types"
 import { Separator } from "../ui/separator"
+import { useLocale } from "next-intl"
 
 export const Timeline = ({ items, theme }: TimelineProps) => {
     const currentYear = new Date().getFullYear()
+    const locale = useLocale()
 
     return (
         <>
             {items.map((item, index) => {
                 const isFirst = index === 0
-                const displayDate = isFirst ? `${currentYear} - Present` : item.date ?? ""
+                const displayDate = isFirst
+                    ? `${currentYear} - ${locale === "pt-br" ? "Presente" : "Present"}`
+                    : item.date ?? ""
 
                 return (
                     <div

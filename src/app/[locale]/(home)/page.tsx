@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
-import { projects, skills, socials, timelineItems } from "./Home.utils"
+import { skills } from "./Home.utils"
 import { Timeline } from "@/components/Timeline/timeline"
 import { CardProject } from "@/components/CardProject/cardProject"
 import {
@@ -17,26 +17,55 @@ import {
 import { Input } from "@/components/ui/input"
 import { useHome } from "./Home.hook"
 import { Textarea } from "@/components/ui/textarea"
-import { Lightbulb, LightbulbOff } from "lucide-react"
+import { Languages, Lightbulb, LightbulbOff } from "lucide-react"
 import clsx from "clsx"
 import { Spinner } from "@/components/ui/spinner"
 
 export default function HomePage() {
-    const { form, theme, setTheme, handleEnviarEmail, loading, frase } = useHome()
+    const {
+        form,
+        theme,
+        setTheme,
+        handleEnviarEmail,
+        loading,
+        frase,
+        t,
+        socials,
+        timelineItems,
+        projects,
+        handleToggleLanguage,
+        locale,
+    } = useHome()
 
     return (
         <div className="relative flex flex-col md:flex-row min-h-screen">
             <Tooltip>
                 <TooltipTrigger asChild>
                     <Button
+                        className="absolute top-8 right-8 md:left-8 md:right-auto z-50"
+                        size={"icon-lg"}
+                        onClick={handleToggleLanguage}
+                    >
+                        <Languages />
+                    </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                    {t("languages." + (locale === "pt-br" ? "en" : "pt-br"))}
+                </TooltipContent>
+            </Tooltip>
+            <Tooltip>
+                <TooltipTrigger asChild>
+                    <Button
                         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-                        className="absolute top-8 right-8 md:left-8 md:right-auto z-50 p-2 rounded-full border"
+                        className="absolute top-8 right-8 md:left-25 md:right-auto z-50 rounded-full border"
                         size={"icon-lg"}
                     >
                         {theme === "light" ? <LightbulbOff /> : <Lightbulb />}
                     </Button>
                 </TooltipTrigger>
-                <TooltipContent>Toggle to {theme === "light" ? "Dark" : "Light"} Mode</TooltipContent>
+                <TooltipContent>
+                    {t("temaToggle." + (theme === "light" ? "dark" : "light"))}
+                </TooltipContent>
             </Tooltip>
 
             <main className="w-full md:w-2/5 md:fixed md:left-0 md:top-0 h-screen flex flex-col gap-4 justify-center items-center md:items-start p-8 md:p-12 text-center md:text-left">
@@ -46,7 +75,7 @@ export default function HomePage() {
                             Enzo Caetano
                         </h1>
                         <p className="text-xl lg:text-2xl text-primary font-mono">
-                            Full Stack Developer
+                            {t("apresentação.profissão")}
                         </p>
                     </div>
 
@@ -78,46 +107,21 @@ export default function HomePage() {
 
             <section className="md:ml-[40%] flex-1 p-8 overflow-y-auto h-auto h-screen flex flex-col gap-16 md:text-left">
                 <section className="flex flex-col gap-8 max-w-3xl md:p-8">
-                    <h2 className="text-4xl font-bold text-balance">
-                        Code with soul, projects with truth.
-                    </h2>
+                    <h2 className="text-4xl font-bold text-balance">{t("apresentação.frases.0")}</h2>
 
                     <div className="flex flex-col gap-4">
-                        <p className="text-pretty ">
-                            Full-stack developer specialized in building performant, scalable, and
-                            visually refined digital products. Skilled across front-end and back-end
-                            stacks, including React, Next.js, TypeScript, Laravel, .NET, Docker, and AWS,
-                            with strong understanding of UI design, infrastructure, and microservices.
-                        </p>
+                        <p className="text-pretty ">{t("apresentação.descrição.p1")}</p>
 
-                        <p className="text-pretty">
-                            At Tecnologia Unica, developed a full insurance management platform
-                            integrating InsureMo APIs, C# microservices, and a React-based BFF layer,
-                            managing CI/CD through Azure DevOps and AWS deployment. At Agência M, led the
-                            modernization of legacy systems, migrating from WordPress and PHP to Flutter
-                            and React Native for seamless mobile and web experiences. Earlier at
-                            Metalúrgica Sete de Setembro, maintained network and server reliability,
-                            optimizing AD and VPN systems.
-                        </p>
+                        <p className="text-pretty">{t("apresentação.descrição.p2")}</p>
 
-                        <p className="text-pretty">
-                            Creator of projects such as Nexus, a sponsorship platform connecting
-                            ETEC/FATEC students and companies; MiMiMi, an AI-based emotional analysis
-                            tool for schools; and the FETEPS app, a digital fair platform for educational
-                            innovation.
-                        </p>
+                        <p className="text-pretty">{t("apresentação.descrição.p3")}</p>
 
-                        <p className="text-pretty">
-                            Driven by precision and usability, I merge thoughtful design with robust
-                            engineering to deliver interfaces that perform flawlessly across
-                            environments. Always focused on clarity, scalability, and meaningful impact
-                            through technology.
-                        </p>
+                        <p className="text-pretty">{t("apresentação.descrição.p4")}</p>
                     </div>
 
                     <div className="flex flex-col gap-4">
                         <h3 className="text-sm font-mono text-muted-foreground mb-4 tracking-wider ">
-                            TECHNOLOGIES
+                            {t("apresentação.tecnologias")}
                         </h3>
                         <div className="flex flex-wrap gap-4">
                             {skills.map((skill) => (
@@ -139,7 +143,7 @@ export default function HomePage() {
 
                 <section className="flex flex-col gap-8 max-w-3xl md:p-8 mt-10">
                     <h2 className="text-4xl font-bold text-balance text-center lg:text-start">
-                        Where I&apos;ve Worked
+                        {t("empregos.titulo")}
                     </h2>
 
                     <Timeline
@@ -150,7 +154,7 @@ export default function HomePage() {
 
                 <section className="flex flex-col gap-8 max-w-3xl p-8  mt-10">
                     <h2 className="text-4xl font-bold text-balance text-center lg:text-start">
-                        Projects
+                        {t("projetos.titulo")}
                     </h2>
 
                     <div className="flex flex-col gap-4">
@@ -164,13 +168,13 @@ export default function HomePage() {
                     </div>
                 </section>
 
-                <section className="flex flex-col gap-8 max-w-3xl md:p-8 lg:mt-10 lg:mb-10" id="email">
-                    <h2 className="text-4xl font-bold text-balance ">Let&apos;s work together</h2>
+                <section
+                    className="flex flex-col gap-8 max-w-3xl md:p-8 lg:mt-10 lg:mb-10"
+                    id="email"
+                >
+                    <h2 className="text-4xl font-bold text-balance ">{t("contato.titulo")}</h2>
 
-                    <p className="text-pretty">
-                        I&apos;m always interested in hearing about new projects and opportunities.
-                        Whether you have a question or just want to say hi, feel free to reach out!
-                    </p>
+                    <p className="text-pretty">{t("contato.descrição")}</p>
 
                     <Form {...form}>
                         <form
@@ -183,12 +187,14 @@ export default function HomePage() {
                                     name="name"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormDescription>Name</FormDescription>
+                                            <FormDescription>
+                                                {t("contato.form.inputsLabels.nome")}
+                                            </FormDescription>
                                             <FormControl>
                                                 <Input
                                                     {...field}
                                                     type="text"
-                                                    placeholder="Your Name"
+                                                    placeholder={t("contato.form.placeholder.nome")}
                                                     className="flex-1"
                                                 />
                                             </FormControl>
@@ -201,12 +207,14 @@ export default function HomePage() {
                                     name="email"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormDescription>Email</FormDescription>
+                                            <FormDescription>
+                                                {t("contato.form.inputsLabels.email")}
+                                            </FormDescription>
                                             <FormControl>
                                                 <Input
                                                     {...field}
                                                     type="email"
-                                                    placeholder="Your Email"
+                                                    placeholder={t("contato.form.placeholder.email")}
                                                     className="flex-1"
                                                 />
                                             </FormControl>
@@ -221,12 +229,14 @@ export default function HomePage() {
                                     name="subject"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormDescription>Subject</FormDescription>
+                                            <FormDescription>
+                                                {t("contato.form.inputsLabels.assunto")}
+                                            </FormDescription>
                                             <FormControl>
                                                 <Input
                                                     {...field}
                                                     type="text"
-                                                    placeholder="what's this about?"
+                                                    placeholder={t("contato.form.placeholder.assunto")}
                                                     className="flex-1"
                                                 />
                                             </FormControl>
@@ -239,11 +249,13 @@ export default function HomePage() {
                                     name="message"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormDescription>Message</FormDescription>
+                                            <FormDescription>
+                                                {t("contato.form.inputsLabels.mensagem")}
+                                            </FormDescription>
                                             <FormControl>
                                                 <Textarea
                                                     {...field}
-                                                    placeholder="tell me more..."
+                                                    placeholder={t("contato.form.placeholder.mensagem")}
                                                     className="flex-1"
                                                 />
                                             </FormControl>
@@ -258,7 +270,7 @@ export default function HomePage() {
                                     className="w-full md:w-auto"
                                     disabled={loading}
                                 >
-                                    {loading && <Spinner />} Send Message
+                                    {loading && <Spinner />} {t("contato.form.botaoEnviar")}
                                 </Button>
                             </div>
                         </form>

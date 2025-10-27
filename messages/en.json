@@ -1,0 +1,89 @@
+{
+    "temaToggle": {
+        "light": "Enable light mode",
+        "dark": "Enable dark mode"
+    },
+    "languages": {
+        "pt-br": "Português (BR)",
+        "en": "English (US)"
+    },
+    "social": {
+        "linkedinTooltip": "Visit my LinkedIn",
+        "githubTooltip": "Visit my GitHub",
+        "instagramTooltip": "Visit my Instagram",
+        "emailTooltip": "Send me an Email"
+    },
+    "apresentação": {
+        "profissão": "Full Stack Developer",
+        "frases": [
+            "Code with soul, projects with truth.",
+            "Where technology meets care, impact is born.",
+            "Innovate with purpose, build with empathy."
+        ],
+        "descrição": {
+            "p1": "Full-stack developer specialized in building performant, scalable, and visually refined digital products. Skilled across front-end and back-end stacks, including React, Next.js, TypeScript, Laravel, .NET, Docker, and AWS, with strong understanding of UI design, infrastructure, and microservices.",
+
+            "p2": "At Tecnologia Unica, developed a full insurance management platform integrating InsureMo APIs, C# microservices, and a React-based BFF layer, managing CI/CD through Azure DevOps and AWS deployment. At Agência M, led the modernization of legacy systems, migrating from WordPress and PHP to Flutter and React Native for seamless mobile and web experiences. Earlier at Metalúrgica Sete de Setembro, maintained network and server reliability, optimizing AD and VPN systems.",
+
+            "p3": "Creator of projects such as Nexus, a sponsorship platform connecting ETEC/FATEC students and companies; MiMiMi, an AI-based emotional analysis tool for schools; and the FETEPS app, a digital fair platform for educational innovation.",
+
+            "p4": "Driven by precision and usability, I merge thoughtful design with robust engineering to deliver interfaces that perform flawlessly across environments. Always focused on clarity, scalability, and meaningful impact through technology."
+        },
+        "tecnologias": "TECHNOLOGIES"
+    },
+    "empregos": {
+        "titulo": "My Experiences",
+        "unica": {
+            "cargo": "Full Stack Developer",
+            "descrição": "I design and develop a scalable insurance management platform that covers all operational and business workflows of the insurance market. I build the front end using React, TypeScript, and Vite, prioritizing high performance and easy maintainability. I develop the back end with .NET and C#, implementing a microservices architecture and a BFF layer integrated with InsureMo APIs and services. I deploy and manage the infrastructure on AWS, ensuring reliability and scalability. I coordinate team tasks and CI/CD pipelines through Azure DevOps, ensuring efficient delivery and collaboration."
+        },
+        "agenciam": {
+            "cargo": "Mobile and Web Developer",
+            "descrição": "I led front-end development and modernization of mobile and web platforms. I maintained and optimized a legacy WordPress and PHP system hosted on cPanel. I refactored an existing React Native application to improve performance and code quality, and developed a fully redesigned cross-platform version using Flutter in collaboration with Google APIs. I worked closely with the design team through Figma to ensure consistent UI and UX across Android and iOS."
+        },
+        "seteDeSetembro": {
+            "cargo": "Infrastructure Assistant",
+            "descrição": "I provided technical support and ensured the reliability of the company’s IT infrastructure. I managed Windows Server environments, configured networks, and maintained hardware and software systems. I oversaw user access control via Active Directory, optimized VPN connections for remote teams, and administered Office and SharePoint environments to enhance collaboration and data security."
+        }
+    },
+    "projetos": {
+        "titulo": "My Projects",
+        "nexus": {
+            "descricao": "Nexus is a digital platform that connects projects from ETEC and FATEC students to companies and sponsors. Its goal is to provide visibility and support for innovative ideas, promoting entrepreneurship in education. Through the platform, students can showcase their projects, while companies offer funding, mentorship, or materials, creating a collaborative network between schools and the business sector."
+        },
+        "mimimi": {
+            "descricao": "The MIMIMI Project uses artificial intelligence to support students' emotional well-being. Through a QR Code robot, students anonymously share words about their feelings. These words are analyzed to generate clouds that reveal emotional patterns in each class, helping schools to identify early signs of distress and connect students with appropriate psychological support."
+        },
+        "feteps": {
+            "descricao": "The FETEPS app is a mobile application developed to present, organize, and track the projects displayed at the Technological Fair of Centro Paula Souza. It allows students, teachers, and evaluators to easily access information about projects, schedules, results, and certificates, providing a practical and modern experience."
+        },
+        "botoes": {
+            "verProjeto": "View Project",
+            "verCodigo": "View Code",
+            "verMais": "View More"
+        }
+    },
+    "contato": {
+        "titulo": "Let's work together",
+        "descrição": "I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
+        "form": {
+            "inputsLabels": {
+                "nome": "Name",
+                "email": "Email",
+                "assunto": "Subject",
+                "mensagem": "Message"
+            },
+            "placeholder": {
+                "nome": "Your name",
+                "email": "Your email",
+                "assunto": "what it's about",
+                "mensagem": "tell me more..."
+            },
+            "botaoEnviar": "Send Message",
+            "toast": {
+                "success": "Email sent successfully!",
+                "error": "Failed to send email. Please try again later."
+            }
+        }
+    }
+}

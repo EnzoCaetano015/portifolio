@@ -3,6 +3,8 @@ import { Badge } from "../ui/badge"
 import { CardProjectProps } from "./cardProject.types"
 import { Button } from "../ui/button"
 import clsx from "clsx"
+import { useTranslations } from "next-intl"
+import { imageMap } from "./cardProject.utils"
 
 export const CardProject = ({
     title,
@@ -12,6 +14,8 @@ export const CardProject = ({
     technologies,
     theme,
 }: CardProjectProps) => {
+    const t = useTranslations()
+
     return (
         <div
             className="flex flex-col lg:flex-row gap-10 p-4 pl-0
@@ -20,7 +24,7 @@ export const CardProject = ({
             <Image
                 width={205}
                 height={105}
-                src={image}
+                src={imageMap[image]}
                 alt={title}
                 className="rounded-md object-cover h-32 w-55 lg:mt-10 opacity-50 hover:opacity-100 transition-opacity"
             />
@@ -58,7 +62,7 @@ export const CardProject = ({
                                 variant="link"
                                 className="p-0"
                             >
-                                View Project
+                                {t("projetos.botoes.verProjeto")}
                             </Button>
                         </a>
                     )}
@@ -72,7 +76,7 @@ export const CardProject = ({
                                 variant="link"
                                 className="p-0"
                             >
-                                View Code
+                                {t("projetos.botoes.verCodigo")}
                             </Button>
                         </a>
                     )}
@@ -86,7 +90,7 @@ export const CardProject = ({
                                 variant="link"
                                 className="p-0"
                             >
-                                View More
+                                {t("projetos.botoes.verMais")}
                             </Button>
                         </a>
                     )}
