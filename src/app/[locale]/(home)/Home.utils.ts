@@ -132,7 +132,7 @@ export const getProjects = (t: TFunction) => [
         link: {
             url: "https://mimimi.app.br/",
             github: null,
-            outro: "https://drive.google.com/file/d/1RTvSzd51oUuAqPDRzIxWRqpY1AuquJsD/view?usp=sharing",
+            outro: "https://www.reporterdiario.com.br/noticia/3586133/",
         },
         technologies: [
             "React",
