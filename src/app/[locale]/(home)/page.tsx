@@ -105,7 +105,7 @@ export default function HomePage() {
 
             <div className="pointer-events-none fixed top-0 right-0 hidden md:block w-[60%] h-15 md:h-10 bg-gradient-to-b from-background/90 to-transparent backdrop-blur-sm z-20 mr-5" />
 
-            <section className="md:ml-[40%] flex-1 p-8 overflow-y-auto h-auto h-screen flex flex-col gap-16 md:text-left">
+            <section className="md:ml-[40%] flex-1 p-8 overflow-y-auto h-screen flex flex-col gap-16 md:text-left">
                 <section className="flex flex-col gap-8 max-w-3xl md:p-8">
                     <h2 className="text-4xl font-bold text-balance">{t("apresentação.frases.0")}</h2>
 
@@ -128,7 +128,7 @@ export default function HomePage() {
                                 <Badge
                                     key={skill}
                                     className={clsx(
-                                        "px-2 py-0.5 text-base font-medium rounded-md transition-colors cursor-pointer",
+                                        "px-2 py-0.5 text-base font-medium rounded-md transition-colors",
                                         theme === "light"
                                             ? "bg-gray-100 text-gray-900 hover:bg-gray-900 hover:text-white hover:scale-105"
                                             : "bg-gray-800 text-gray-100 hover:bg-white hover:text-black hover:scale-105"

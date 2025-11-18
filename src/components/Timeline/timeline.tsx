@@ -54,7 +54,7 @@ export const Timeline = ({ items, theme }: TimelineProps) => {
                                             <Badge
                                                 key={tech}
                                                 className={clsx(
-                                                    "rounded-md transition-colors cursor-pointer",
+                                                    "rounded-md transition-colors",
                                                     theme === "light"
                                                         ? "bg-gray-800 text-gray-100 hover:scale-105"
                                                         : "bg-gray-100 text-gray-900 hover:scale-105"
