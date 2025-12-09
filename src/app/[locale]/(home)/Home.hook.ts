@@ -39,15 +39,25 @@ export const useHome = () => {
 
     const handleEnviarEmail = form.handleSubmit(async (data: FormSchemaType) => {
         try {
-            // Simulate email sending
             setLoading(true)
-            await new Promise((resolve) => setTimeout(resolve, 2000))
-            setLoading(false)
-            console.log("Email data:", data)
+
+            const response = await fetch("/api/contato", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            })
+
+            if (!response.ok) {
+                throw new Error("Falha ao enviar email")
+            }
+
             toast.success(t("contato.form.toast.success"))
             form.reset()
-        } catch {
+        } catch (error) {
+            console.error("Erro ao enviar email", error)
             toast.error(t("contato.form.toast.error"))
+        } finally {
+            setLoading(false)
         }
     })
 

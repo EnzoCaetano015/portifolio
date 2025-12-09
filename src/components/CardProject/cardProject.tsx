@@ -26,7 +26,7 @@ export const CardProject = ({
                 height={105}
                 src={imageMap[image]}
                 alt={title}
-                className="rounded-md object-cover h-32 w-55 lg:mt-10 opacity-50 hover:opacity-100 transition-opacity"
+                className="rounded-md lg:h-45 h-52 w-55 lg:mt-10 opacity-50 hover:opacity-100 transition-opacity"
             />
 
             <div className="flex flex-col gap-4">

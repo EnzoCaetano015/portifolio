@@ -196,6 +196,7 @@ export default function HomePage() {
                                                     type="text"
                                                     placeholder={t("contato.form.placeholder.nome")}
                                                     className="flex-1"
+                                                    disabled={loading}
                                                 />
                                             </FormControl>
                                             <FormMessage />
@@ -216,6 +217,7 @@ export default function HomePage() {
                                                     type="email"
                                                     placeholder={t("contato.form.placeholder.email")}
                                                     className="flex-1"
+                                                    disabled={loading}
                                                 />
                                             </FormControl>
                                             <FormMessage />
@@ -238,6 +240,7 @@ export default function HomePage() {
                                                     type="text"
                                                     placeholder={t("contato.form.placeholder.assunto")}
                                                     className="flex-1"
+                                                    disabled={loading}
                                                 />
                                             </FormControl>
                                             <FormMessage />
@@ -257,6 +260,7 @@ export default function HomePage() {
                                                     {...field}
                                                     placeholder={t("contato.form.placeholder.mensagem")}
                                                     className="flex-1"
+                                                    disabled={loading}
                                                 />
                                             </FormControl>
                                             <FormMessage />

@@ -20,6 +20,10 @@ export const skills = [
     "Laravel",
     "Linux",
     "Git",
+    "C#",
+    ".NET",
+    "AzureDevOps",
+    "Sql Server",
 ]
 
 export const getFrases = (t: TFunction) => t.raw("apresentação.frases")
@@ -106,19 +110,17 @@ export const getProjects = (t: TFunction) => [
         image: "nexus.png",
         link: {
             url: "https://nexus.caetanodev.com",
-            github: "https://github.com/TCC-trabalho?tab=repositories",
+            github: null,
             outro: null,
         },
         technologies: [
-            "React",
-            "Vite",
+            "Next.js",
             "TypeScript",
-            "PHP",
-            "Laravel",
-            "Mercado Pago",
+            "Stripe",
+            "Prisma",
+            "Node.js",
             "MySQL",
             "Resend",
-            "Pusher",
             "Docker",
             "Nginx",
             "VPS",
@@ -135,7 +137,7 @@ export const getProjects = (t: TFunction) => [
             outro: "https://www.reporterdiario.com.br/noticia/3586133/",
         },
         technologies: [
-            "React",
+            "React.js",
             "Vite",
             "JavaScript",
             "Python",
@@ -151,7 +153,7 @@ export const getProjects = (t: TFunction) => [
     {
         title: "App FETEPS",
         description: t("projetos.feteps.descricao"),
-        image: "feteps.jpeg",
+        image: "feteps.png",
         link: {
             url: null,
             github: "https://github.com/EnzoCaetano015/FetepsAPP",
