@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
-import { skills } from "./Home.utils"
+import { forwardWheelToElementScroll, skills } from "./Home.utils"
 import { Timeline } from "@/components/Timeline/timeline"
 import { CardProject } from "@/components/CardProject/cardProject"
 import {
@@ -20,8 +20,10 @@ import { Textarea } from "@/components/ui/textarea"
 import { Languages, Lightbulb, LightbulbOff } from "lucide-react"
 import clsx from "clsx"
 import { Spinner } from "@/components/ui/spinner"
+import { Transition } from "@/components/Transition/Transition"
 
 export default function HomePage() {
+
     const {
         form,
         theme,
@@ -35,6 +37,7 @@ export default function HomePage() {
         projects,
         handleToggleLanguage,
         locale,
+        contentScrollRef
     } = useHome()
 
     return (
@@ -68,7 +71,10 @@ export default function HomePage() {
                 </TooltipContent>
             </Tooltip>
 
-            <main className="w-full md:w-2/5 md:fixed md:left-0 md:top-0 h-screen flex flex-col gap-4 justify-center items-center md:items-start p-8 md:p-12 text-center md:text-left">
+            <main
+                className="w-full md:w-2/5 md:fixed md:left-0 md:top-0 h-screen flex flex-col gap-4 justify-center items-center md:items-start p-8 md:p-12 text-center md:text-left"
+                onWheel={(event) => forwardWheelToElementScroll(event, contentScrollRef.current)}
+            >
                 <div className="flex-1 flex flex-col justify-center gap-4">
                     <div className="space-y-2">
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance">
@@ -105,7 +111,10 @@ export default function HomePage() {
 
             <div className="pointer-events-none fixed top-0 right-0 hidden md:block w-[60%] h-15 md:h-10 bg-gradient-to-b from-background/90 to-transparent backdrop-blur-sm z-20 mr-5" />
 
-            <section className="md:ml-[40%] flex-1 p-8 overflow-y-auto h-screen flex flex-col gap-16 md:text-left">
+            <section
+                ref={contentScrollRef}
+                className="md:ml-[40%] flex-1 p-8 overflow-y-auto h-screen flex flex-col gap-16 md:text-left"
+            >
                 <section className="flex flex-col gap-8 max-w-3xl md:p-8">
                     <h2 className="text-4xl font-bold text-balance">{t("apresentação.frases.0")}</h2>
 
@@ -199,7 +208,14 @@ export default function HomePage() {
                                                     disabled={loading}
                                                 />
                                             </FormControl>
-                                            <FormMessage />
+                                            <div className="min-h-5">
+                                                <Transition
+                                                    condition={!!form.formState.errors.name}
+                                                    mode="center"
+                                                >
+                                                    <FormMessage />
+                                                </Transition>
+                                            </div>
                                         </FormItem>
                                     )}
                                 />
@@ -220,7 +236,14 @@ export default function HomePage() {
                                                     disabled={loading}
                                                 />
                                             </FormControl>
-                                            <FormMessage />
+                                            <div className="min-h-5">
+                                                <Transition
+                                                    condition={!!form.formState.errors.email}
+                                                    mode="center"
+                                                >
+                                                    <FormMessage />
+                                                </Transition>
+                                            </div>
                                         </FormItem>
                                     )}
                                 />
@@ -243,7 +266,14 @@ export default function HomePage() {
                                                     disabled={loading}
                                                 />
                                             </FormControl>
-                                            <FormMessage />
+                                            <div className="min-h-5">
+                                                <Transition
+                                                    condition={!!form.formState.errors.subject}
+                                                    mode="center"
+                                                >
+                                                    <FormMessage />
+                                                </Transition>
+                                            </div>
                                         </FormItem>
                                     )}
                                 />
@@ -263,12 +293,19 @@ export default function HomePage() {
                                                     disabled={loading}
                                                 />
                                             </FormControl>
-                                            <FormMessage />
+                                            <div className="min-h-5">
+                                                <Transition
+                                                    condition={!!form.formState.errors.message}
+                                                    mode="center"
+                                                >
+                                                    <FormMessage />
+                                                </Transition>
+                                            </div>
                                         </FormItem>
                                     )}
                                 />
                             </div>
-                            <div className="flex flex-row">
+                            <div className="flex flex-row justify-end">
                                 <Button
                                     type="submit"
                                     className="w-full md:w-auto"

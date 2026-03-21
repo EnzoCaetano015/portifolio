@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form"
 import { formSchema, FormSchemaType } from "./Home.schemas"
 import { useTheme } from "next-themes"
 import { toast } from "sonner"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useLocale, useTranslations } from "next-intl"
 import { getFrases, getProjects, getSocials, getTimelineItems } from "./Home.utils"
 import { usePathname, useRouter } from "next/navigation"
@@ -11,6 +11,7 @@ import { usePathname, useRouter } from "next/navigation"
 export const useHome = () => {
     const [loading, setLoading] = useState(false)
     const [frase, setFrase] = useState("")
+    const contentScrollRef = useRef<HTMLElement | null>(null)
 
     const t = useTranslations()
 
@@ -83,5 +84,6 @@ export const useHome = () => {
         projects,
         handleToggleLanguage,
         locale,
+        contentScrollRef,
     }
 }

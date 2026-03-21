@@ -1,5 +1,6 @@
 import { Github, Instagram, Linkedin, Mail } from "lucide-react"
 import { useTranslations } from "next-intl"
+import type { WheelEvent } from "react"
 
 type TFunction = ReturnType<typeof useTranslations>
 
@@ -116,15 +117,12 @@ export const getProjects = (t: TFunction) => [
         technologies: [
             "Next.js",
             "TypeScript",
-            "Stripe",
+            "Assas",
             "Prisma",
             "Node.js",
-            "MySQL",
+            "Supabase",
             "Resend",
             "Docker",
-            "Nginx",
-            "VPS",
-            "Ubuntu",
         ],
     },
     {
@@ -139,15 +137,16 @@ export const getProjects = (t: TFunction) => [
         technologies: [
             "React.js",
             "Vite",
-            "JavaScript",
+            "TypeScript",
             "Python",
             "FastAPI",
             "MySQL",
+            "Pnpm",
+            "Gemini-2.0-flash",
+            "Prompt Engineering",
+            "Data Analysis",
             "Machine Learning",
             "Docker",
-            "Nginx",
-            "VPS",
-            "Ubuntu",
         ],
     },
     {
@@ -171,3 +170,22 @@ export const getProjects = (t: TFunction) => [
         ],
     },
 ]
+
+export const forwardWheelToElementScroll = (
+    event: WheelEvent<HTMLElement>,
+    scrollElement: HTMLElement | null
+) => {
+    if (!scrollElement) return
+
+    let deltaY = event.deltaY
+
+    if (event.deltaMode === 1) {
+        deltaY *= 16
+    } else if (event.deltaMode === 2) {
+        deltaY *= window.innerHeight
+    }
+
+    event.preventDefault()
+    scrollElement.scrollTop += deltaY
+}
+
