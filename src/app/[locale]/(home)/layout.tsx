@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     },
     description:
         "Portfolio website of Enzo Caetano, a full stack developer specializing in web development and infrastructure.",
+    verification: {
+        google: "r1qp17QdflW4KzwLFr4Y4XNMc2W_yGnlxbjb3Bd1wYs",
+    },
 }
 
 export default async function RootLayout({
