@@ -14,20 +14,14 @@
         "emailTooltip": "Send me an Email"
     },
     "apresentação": {
+        "titulo": "About me",
         "profissão": "Full Stack Developer",
-        "frases": [
-            "Code with soul, projects with truth.",
-            "Where technology meets care, impact is born.",
-            "Innovate with purpose, build with empathy."
-        ],
         "descrição": {
-            "p1": "Full-stack developer specialized in building performant, scalable, and visually refined digital products. Skilled across front-end and back-end stacks, including React, Next.js, TypeScript, Laravel, .NET, Docker, and AWS, with strong understanding of UI design, infrastructure, and microservices.",
+            "p1": "I am a Full Stack Developer with hands-on experience building web applications, APIs, automations, and integrations. I work primarily with React, TypeScript, .NET, Python, PHP/Laravel, and SQL databases, connecting well-structured frontends with organized backends and clear business rules.",
 
-            "p2": "At Tecnologia Unica, developed a full insurance management platform integrating InsureMo APIs, C# microservices, and a React-based BFF layer, managing CI/CD through Azure DevOps and AWS deployment. At Agência M, led the modernization of legacy systems, migrating from WordPress and PHP to Flutter and React Native for seamless mobile and web experiences. Earlier at Metalúrgica Sete de Setembro, maintained network and server reliability, optimizing AD and VPN systems.",
+            "p2": "I am currently studying Artificial Intelligence at FIAP, where I apply data, Machine Learning, automation, and IoT in academic projects and practical solutions. I enjoy building products that move from concept to usable systems, with a focus on clarity, organization, usability, and continuous improvement.",
 
-            "p3": "Creator of projects such as Nexus, a sponsorship platform connecting ETEC/FATEC students and companies; MiMiMi, an AI-based emotional analysis tool for schools; and the FETEPS app, a digital fair platform for educational innovation.",
-
-            "p4": "Driven by precision and usability, I merge thoughtful design with robust engineering to deliver interfaces that perform flawlessly across environments. Always focused on clarity, scalability, and meaningful impact through technology."
+            "p3": "I have experience with projects in insurance, education, events, agrotech, dashboards, and digital platforms. My goal is to grow as a Full Stack Developer, expanding my expertise in Data and applied AI to create useful, scalable, and well-documented solutions."
         },
         "tecnologias": "TECHNOLOGIES"
     },
@@ -35,24 +29,27 @@
         "titulo": "My Experiences",
         "unica": {
             "cargo": "Full Stack Developer",
-            "descrição": "I design and develop a scalable insurance management platform that covers all operational and business workflows of the insurance market. I build the front end using React, TypeScript, and Vite, prioritizing high performance and easy maintainability. I develop the back end with .NET and C#, implementing a microservices architecture and a BFF layer integrated with InsureMo APIs and services. I deploy and manage the infrastructure on AWS, ensuring reliability and scalability. I coordinate team tasks and CI/CD pipelines through Azure DevOps, ensuring efficient delivery and collaboration."
+            "descrição": "I work on the development of Proteo, a platform for the insurance market, contributing to Claims, Policies, BCP, commission management, financial workflows, and integration modules.\n\nOn the backend, I work with .NET, APIs, microservices, automated workers, email delivery, and Insuremo integrations. On the frontend, I develop workflows in React with a focus on usability, business rules, and maintainability."
         },
         "agenciam": {
             "cargo": "Mobile and Web Developer",
-            "descrição": "I led front-end development and modernization of mobile and web platforms. I maintained and optimized a legacy WordPress and PHP system hosted on cPanel. I refactored an existing React Native application to improve performance and code quality, and developed a fully redesigned cross-platform version using Flutter in collaboration with Google APIs. I worked closely with the design team through Figma to ensure consistent UI and UX across Android and iOS."
+            "descrição": "I worked on the maintenance and modernization of web and mobile systems, including projects using PHP, WordPress, React Native, and Flutter.\n\nI contributed to the evolution of a room scheduling system and the restructuring of a legacy mobile application, helping create a more organized, reusable foundation ready for publication."
         },
         "seteDeSetembro": {
             "cargo": "Infrastructure Assistant",
-            "descrição": "I provided technical support and ensured the reliability of the company’s IT infrastructure. I managed Windows Server environments, configured networks, and maintained hardware and software systems. I oversaw user access control via Active Directory, optimized VPN connections for remote teams, and administered Office and SharePoint environments to enhance collaboration and data security."
+            "descrição": "I worked in IT infrastructure support, configuring computers, networks, printers, and a local server, as well as organizing internal processes with SharePoint.\n\nI also developed an internal extension management system, centralizing information and making it easier for employees to update and consult it."
         }
     },
     "projetos": {
         "titulo": "My Projects",
+        "dashowboard": {
+            "descricao": "DashowBoard is an open-source desktop application created to centralize project and service monitoring in a single dashboard. Through integrations with GitHub, Vercel, Railway, and Supabase, the application enables users to track deployments, incidents, resource statuses, and operational metrics. In this way, it helps developers visualize their environments in a more organized, local, and customizable way."
+        },
         "nexus": {
             "descricao": "Nexus is a digital platform that connects projects from ETEC and FATEC students to companies and sponsors. Its goal is to provide visibility and support for innovative ideas, promoting entrepreneurship in education. Through the platform, students can showcase their projects, while companies offer funding, mentorship, or materials, creating a collaborative network between schools and the business sector."
         },
         "mimimi": {
-            "descricao": "The MIMIMI Project uses artificial intelligence to support students' emotional well-being. Through a QR Code robot, students anonymously share words about their feelings. These words are analyzed to generate clouds that reveal emotional patterns in each class, helping schools to identify early signs of distress and connect students with appropriate psychological support."
+            "descricao": "The MIMIMI Project uses Artificial Intelligence to promote students' emotional well-being. Through the anonymous sharing of feelings, the solution uses Natural Language Processing (NLP) to analyze their reports. In this way, it helps schools identify emotional patterns, detect warning signs, and direct students to appropriate support."
         },
         "feteps": {
             "descricao": "The FETEPS app is a mobile application developed to present, organize, and track the projects displayed at the Technological Fair of Centro Paula Souza. It allows students, teachers, and evaluators to easily access information about projects, schedules, results, and certificates, providing a practical and modern experience."
@@ -64,7 +61,7 @@
         }
     },
     "contato": {
-        "titulo": "Let's work together",
+        "titulo": "Let's build something together?",
         "descrição": "I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
         "form": {
             "inputsLabels": {
@@ -79,7 +76,7 @@
                 "assunto": "what it's about",
                 "mensagem": "tell me more..."
             },
-            "botaoEnviar": "Send Message",
+            "botaoEnviar": "Get in touch",
             "toast": {
                 "success": "Email sent successfully!",
                 "error": "Failed to send email. Please try again later."

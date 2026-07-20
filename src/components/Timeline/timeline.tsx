@@ -45,7 +45,9 @@ export const Timeline = ({ items, theme }: TimelineProps) => {
                                 </span>
 
                                 {item.description && (
-                                    <p className="text-sm md:text-base">{item.description}</p>
+                                    <p className="whitespace-pre-line text-sm md:text-base">
+                                        {item.description}
+                                    </p>
                                 )}
 
                                 {item.technologies && (

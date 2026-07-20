@@ -3,14 +3,13 @@ import { useForm } from "react-hook-form"
 import { formSchema, FormSchemaType } from "./Home.schemas"
 import { useTheme } from "next-themes"
 import { toast } from "sonner"
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { useLocale, useTranslations } from "next-intl"
-import { getFrases, getProjects, getSocials, getTimelineItems } from "./Home.utils"
+import { getProjects, getSocials, getTimelineItems } from "./Home.utils"
 import { usePathname, useRouter } from "next/navigation"
 
 export const useHome = () => {
     const [loading, setLoading] = useState(false)
-    const [frase, setFrase] = useState("")
     const contentScrollRef = useRef<HTMLElement | null>(null)
 
     const t = useTranslations()
@@ -64,20 +63,12 @@ export const useHome = () => {
 
     const { theme, setTheme } = useTheme()
 
-    useEffect(() => {
-        const frasesTraduzidas = getFrases(t)
-        const aleatoria = frasesTraduzidas[Math.floor(Math.random() * frasesTraduzidas.length)]
-        setFrase(aleatoria)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-
     return {
         form,
         theme,
         setTheme,
         handleEnviarEmail,
         loading,
-        frase,
         t,
         socials,
         timelineItems,

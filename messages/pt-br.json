@@ -14,20 +14,14 @@
         "emailTooltip": "Envie-me um Email"
     },
     "apresentação": {
+        "titulo": "Sobre mim",
         "profissão": "Desenvolvedor Full Stack",
-        "frases": [
-            "Código com alma, projetos com verdade.",
-            "Onde a tecnologia encontra o cuidado, nasce o impacto.",
-            "Inovar com propósito, construir com empatia."
-        ],
         "descrição": {
-            "p1": "Desenvolvedor full-stack especializado em criar produtos digitais performáticos, escaláveis e visualmente refinados. Domina front-end e back-end, com experiência em React, Next.js, TypeScript, Laravel, .NET, Docker e AWS, além de sólida compreensão em design de interface, infraestrutura e microserviços.",
+            "p1": "Sou Desenvolvedor Full Stack, com experiência prática na criação de aplicações web, APIs, automações e integrações. Atuo principalmente com React, TypeScript, .NET, Python, PHP/Laravel e bancos SQL, conectando frontend bem estruturado com backend organizado e regras de negócio claras.",
 
-            "p2": "Na Tecnologia Única, desenvolveu uma plataforma completa de gestão de seguros integrando APIs InsureMo, microsserviços em C# e uma camada BFF em React, gerenciando CI/CD via Azure DevOps e implantação na AWS. Na Agência M, liderou a modernização de sistemas legados, migrando de WordPress e PHP para Flutter e React Native, proporcionando experiências integradas entre web e mobile. Anteriormente, na Metalúrgica Sete de Setembro, manteve a confiabilidade de redes e servidores, otimizando sistemas de Active Directory e VPN.",
+            "p2": "Atualmente curso Inteligência Artificial na FIAP, onde aplico dados, Machine Learning, automação e IoT em projetos acadêmicos e soluções práticas. Gosto de construir produtos que saem do conceito e viram sistemas utilizáveis, com foco em clareza, organização, usabilidade e evolução contínua.",
 
-            "p3": "Criador de projetos como o Nexus, uma plataforma de patrocínio que conecta estudantes da ETEC/FATEC a empresas; MiMiMi, uma ferramenta de análise emocional baseada em IA para escolas; e o app FETEPS, uma feira digital para inovação educacional.",
-
-            "p4": "Movido por precisão e usabilidade, uno design cuidadoso com engenharia robusta para entregar interfaces que funcionam perfeitamente em diversos ambientes. Sempre focado em clareza, escalabilidade e impacto significativo por meio da tecnologia."
+            "p3": "Tenho experiência em projetos para seguros, educação, eventos, agrotech, dashboards e plataformas digitais. Meu objetivo é evoluir como Desenvolvedor Full Stack, ampliando minha atuação em Dados e IA aplicada para criar soluções úteis, escaláveis e bem documentadas."
         },
         "tecnologias": "TECNOLOGIAS"
     },
@@ -35,24 +29,27 @@
         "titulo": "Minhas Experiências",
         "unica": {
             "cargo": "Desenvolvedor Full Stack",
-            "descrição": "Projeto e desenvolvo uma plataforma escalável de gestão de seguros que abrange todos os fluxos operacionais e de negócios do mercado segurador. Construo o front-end utilizando React, TypeScript e Vite, priorizando alto desempenho e fácil manutenção. Desenvolvo o back-end em .NET e C#, implementando uma arquitetura de microsserviços e uma camada BFF integrada às APIs e serviços do InsureMo. Implanto e gerencio a infraestrutura na AWS, garantindo confiabilidade e escalabilidade. Coordeno as tarefas da equipe e os pipelines de CI/CD via Azure DevOps, assegurando eficiência na entrega e colaboração."
+            "descrição": "Atuo no desenvolvimento do Proteo, plataforma voltada ao mercado de seguros, contribuindo em módulos de Sinistro, Apólices, BCP, comissionamento, fluxos financeiros e integrações.\n\nNo backend, trabalho com .NET, APIs, microserviços, workers automatizados, envio de e-mails e integrações com Insuremo. No frontend, desenvolvo fluxos em React com foco em usabilidade, regras de negócio e manutenção."
         },
         "agenciam": {
             "cargo": "Desenvolvedor Mobile e Web",
-            "descrição": "Liderei o desenvolvimento front-end e a modernização das plataformas mobile e web. Mantive e otimizei um sistema legado em WordPress e PHP hospedado em cPanel. Refatorei um aplicativo existente em React Native para melhorar o desempenho e a qualidade do código, e desenvolvi uma nova versão multiplataforma totalmente redesenhada utilizando Flutter em colaboração com as APIs do Google. Colaborei de perto com a equipe de design por meio do Figma para garantir uma interface e experiência de usuário consistentes entre Android e iOS."
+            "descrição": "Atuei na manutenção e modernização de sistemas web e mobile, incluindo projetos em PHP, WordPress, React Native e Flutter.\n\nParticipei da evolução de um sistema de agendamento de salas e da reestruturação de um aplicativo mobile legado, contribuindo para uma base mais organizada, reutilizável e preparada para publicação."
         },
         "seteDeSetembro": {
             "cargo": "Assistente de infraestrutura",
-            "descrição": "Prestei suporte técnico e garanti a confiabilidade da infraestrutura de TI da empresa. Gerenciei ambientes Windows Server, configurei redes e mantive sistemas de hardware e software. Supervisei o controle de acesso de usuários por meio do Active Directory, otimizei conexões VPN para equipes remotas e administrei os ambientes do Office e SharePoint para aprimorar a colaboração e a segurança dos dados."
+            "descrição": "Atuei no suporte à infraestrutura de TI, configuração de computadores, redes, impressoras, servidor local e organização de processos internos com SharePoint.\n\nTambém desenvolvi um sistema interno para gerenciamento de ramais, centralizando informações e facilitando a atualização e consulta pelos colaboradores."
         }
     },
     "projetos": {
         "titulo": "Meus Projetos",
+        "dashowboard": {
+            "descricao": "O DashowBoard é um aplicativo desktop open-source criado para centralizar o monitoramento de projetos e serviços em um único painel. Por meio de integrações com GitHub, Vercel, Railway e Supabase, a aplicação permite acompanhar deploys, incidentes, status de recursos e métricas operacionais. Dessa forma, ajuda desenvolvedores a visualizar seus ambientes de forma mais organizada, local e personalizável."
+        },
         "nexus": {
             "descricao": "O Nexus é uma plataforma digital que conecta projetos de estudantes das ETECs e FATECs a empresas e patrocinadores. Seu objetivo é dar visibilidade e apoio a ideias inovadoras, promovendo o empreendedorismo na educação. Por meio da plataforma, os alunos podem apresentar seus projetos, enquanto as empresas oferecem financiamento, mentoria ou materiais, formando uma rede colaborativa entre as escolas e o setor empresarial."
         },
         "mimimi": {
-            "descricao": "O Projeto MIMIMI utiliza inteligência artificial para apoiar o bem-estar emocional dos alunos. Por meio de um robô com QR Code, os estudantes compartilham anonimamente palavras sobre seus sentimentos. Essas palavras são analisadas para gerar nuvens que revelam padrões emocionais em cada turma, ajudando as escolas a identificar precocemente sinais de sofrimento e conectar os alunos ao apoio psicológico adequado."
+            "descricao": "O Projeto MIMIMI emprega Inteligência Artificial para promover o bem-estar emocional dos alunos. Por meio do compartilhamento anônimo de sentimentos, a solução utiliza Processamento de Linguagem Natural (PLN) para analisar os relatos. Dessa forma, auxilia as escolas na identificação de padrões emocionais, na detecção de sinais de alerta e no direcionamento para acompanhamento adequado."
         },
         "feteps": {
             "descricao": "O aplicativo FETEPS é uma aplicação mobile desenvolvida para apresentar, organizar e acompanhar os projetos exibidos na Feira Tecnológica do Centro Paula Souza. Ele permite que alunos, professores e avaliadores acessem facilmente informações sobre os projetos, cronogramas, resultados e certificados, oferecendo uma experiência prática e moderna."
@@ -64,7 +61,7 @@
         }
     },
     "contato": {
-        "titulo": "Vamos trabalhar juntos",
+        "titulo": "Vamos construir algo juntos?",
         "descrição": "Estou sempre interessado em ouvir sobre novos projetos e oportunidades. Seja para tirar uma dúvida ou apenas dizer oi, sinta-se à vontade para entrar em contato!",
         "form": {
             "inputsLabels": {
@@ -79,7 +76,7 @@
                 "assunto": "do que se trata",
                 "mensagem": "diga-me mais..."
             },
-            "botaoEnviar": "Enviar Mensagem",
+            "botaoEnviar": "Entrar em contato",
             "toast": {
                 "success": "Email enviado com sucesso!",
                 "error": "Falha ao enviar o email. Por favor, tente novamente mais tarde."

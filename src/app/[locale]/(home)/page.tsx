@@ -30,7 +30,6 @@ export default function HomePage() {
         setTheme,
         handleEnviarEmail,
         loading,
-        frase,
         t,
         socials,
         timelineItems,
@@ -85,9 +84,6 @@ export default function HomePage() {
                         </p>
                     </div>
 
-                    <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-md text-pretty mx-auto md:mx-0">
-                        {frase}
-                    </p>
                 </div>
 
                 <div className="flex flex-row gap-4 justify-center">
@@ -116,7 +112,7 @@ export default function HomePage() {
                 className="md:ml-[40%] flex-1 p-8 overflow-y-auto h-screen flex flex-col gap-16 md:text-left"
             >
                 <section className="flex flex-col gap-8 max-w-3xl md:p-8">
-                    <h2 className="text-4xl font-bold text-balance">{t("apresentação.frases.0")}</h2>
+                    <h2 className="text-4xl font-bold text-balance">{t("apresentação.titulo")}</h2>
 
                     <div className="flex flex-col gap-4">
                         <p className="text-pretty ">{t("apresentação.descrição.p1")}</p>
@@ -124,8 +120,6 @@ export default function HomePage() {
                         <p className="text-pretty">{t("apresentação.descrição.p2")}</p>
 
                         <p className="text-pretty">{t("apresentação.descrição.p3")}</p>
-
-                        <p className="text-pretty">{t("apresentação.descrição.p4")}</p>
                     </div>
 
                     <div className="flex flex-col gap-4">
