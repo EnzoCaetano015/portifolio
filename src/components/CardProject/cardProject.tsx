@@ -12,6 +12,7 @@ export const CardProject = ({
     image,
     link,
     technologies,
+    inDevelopment,
     theme,
 }: CardProjectProps) => {
     const t = useTranslations()
@@ -52,6 +53,11 @@ export const CardProject = ({
                 </div>
 
                 <div className="flex flex-row gap-8 justify-center lg:justify-start">
+                    {inDevelopment && (
+                        <Badge className="border-amber-400 bg-gradient-to-r from-amber-300 to-orange-400 text-amber-950 shadow-sm">
+                            {t("projetos.status.emDesenvolvimento")}
+                        </Badge>
+                    )}
                     {link.url && (
                         <a
                             href={link.url}

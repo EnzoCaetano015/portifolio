@@ -8,5 +8,6 @@ export interface CardProjectProps {
         outro: string | null;
     };
     technologies: string[];
+    inDevelopment?: boolean;
     theme?: string
 }

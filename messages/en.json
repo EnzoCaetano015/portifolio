@@ -45,8 +45,11 @@
         "dashowboard": {
             "descricao": "DashowBoard is an open-source desktop application created to centralize project and service monitoring in a single dashboard. Through integrations with GitHub, Vercel, Railway, and Supabase, the application enables users to track deployments, incidents, resource statuses, and operational metrics. In this way, it helps developers visualize their environments in a more organized, local, and customizable way."
         },
-        "nexus": {
-            "descricao": "Nexus is a digital platform that connects projects from ETEC and FATEC students to companies and sponsors. Its goal is to provide visibility and support for innovative ideas, promoting entrepreneurship in education. Through the platform, students can showcase their projects, while companies offer funding, mentorship, or materials, creating a collaborative network between schools and the business sector."
+        "archbase": {
+            "descricao": "Archbase is an open-source CLI written in Go that makes code patterns and architecture rules explicit, reusable, and understandable by developers and AI agents. It enables teams to define patterns, rules, and local scopes, distribute them through registries, and expose architectural context via MCP, helping both people and agents produce code that follows each project's conventions."
+        },
+        "bifrost": {
+            "descricao": "Bifrost is a platform focused on creating, showcasing, supporting, and funding projects. The solution connects people, creators, and companies through open participation, donations, partnerships, and sponsorships, bringing project discovery and different forms of collaboration into a single ecosystem."
         },
         "mimimi": {
             "descricao": "The MIMIMI Project uses Artificial Intelligence to promote students' emotional well-being. Through the anonymous sharing of feelings, the solution uses Natural Language Processing (NLP) to analyze their reports. In this way, it helps schools identify emotional patterns, detect warning signs, and direct students to appropriate support."
@@ -58,6 +61,9 @@
             "verProjeto": "View Project",
             "verCodigo": "View Code",
             "verMais": "View More"
+        },
+        "status": {
+            "emDesenvolvimento": "In development"
         }
     },
     "contato": {

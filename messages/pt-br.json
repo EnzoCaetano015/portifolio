@@ -45,8 +45,11 @@
         "dashowboard": {
             "descricao": "O DashowBoard é um aplicativo desktop open-source criado para centralizar o monitoramento de projetos e serviços em um único painel. Por meio de integrações com GitHub, Vercel, Railway e Supabase, a aplicação permite acompanhar deploys, incidentes, status de recursos e métricas operacionais. Dessa forma, ajuda desenvolvedores a visualizar seus ambientes de forma mais organizada, local e personalizável."
         },
-        "nexus": {
-            "descricao": "O Nexus é uma plataforma digital que conecta projetos de estudantes das ETECs e FATECs a empresas e patrocinadores. Seu objetivo é dar visibilidade e apoio a ideias inovadoras, promovendo o empreendedorismo na educação. Por meio da plataforma, os alunos podem apresentar seus projetos, enquanto as empresas oferecem financiamento, mentoria ou materiais, formando uma rede colaborativa entre as escolas e o setor empresarial."
+        "archbase": {
+            "descricao": "O Archbase é uma CLI open-source em Go que torna padrões de código e regras de arquitetura explícitos, reutilizáveis e compreensíveis por desenvolvedores e agentes de IA. A ferramenta permite definir padrões, regras e escopos locais, distribuí-los por registries e expor o contexto arquitetural via MCP, ajudando equipes e agentes a produzir código consistente com as convenções de cada projeto."
+        },
+        "bifrost": {
+            "descricao": "O Bifrost é uma plataforma voltada à criação, divulgação, apoio e financiamento de projetos. A solução conecta pessoas, criadores e empresas por meio de participação aberta, doações, parcerias e patrocínios, reunindo em um único ecossistema a descoberta de iniciativas e diferentes formas de colaboração."
         },
         "mimimi": {
             "descricao": "O Projeto MIMIMI emprega Inteligência Artificial para promover o bem-estar emocional dos alunos. Por meio do compartilhamento anônimo de sentimentos, a solução utiliza Processamento de Linguagem Natural (PLN) para analisar os relatos. Dessa forma, auxilia as escolas na identificação de padrões emocionais, na detecção de sinais de alerta e no direcionamento para acompanhamento adequado."
@@ -58,6 +61,9 @@
             "verProjeto": "Ver Projeto",
             "verCodigo": "Ver Código",
             "verMais": "Ver Mais"
+        },
+        "status": {
+            "emDesenvolvimento": "Em desenvolvimento"
         }
     },
     "contato": {
