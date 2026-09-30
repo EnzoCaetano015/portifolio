@@ -114,7 +114,7 @@ export const getProjects = (t: TFunction) => [
         description: t("projetos.dashowboard.descricao"),
         image: "dashowboard.png",
         link: {
-            url: null,
+            url: "https://dashowboard.caetanodev.com/",
             github: "https://github.com/EnzoCaetano015/DashowBoard",
             outro: null,
         },
@@ -138,7 +138,7 @@ export const getProjects = (t: TFunction) => [
         description: t("projetos.archbase.descricao"),
         image: "archbase-card.png",
         link: {
-            url: null,
+            url: "https://archbase.caetanodev.com/",
             github: "https://github.com/EnzoCaetano015/Archbase",
             outro: null,
         },
