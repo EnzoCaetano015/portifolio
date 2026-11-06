@@ -1,3 +1,4 @@
+import type { CardProjectProps } from "@/components/CardProject/cardProject.types"
 import { Github, Instagram, Linkedin, Mail } from "lucide-react"
 import { useTranslations } from "next-intl"
 import type { WheelEvent } from "react"
@@ -108,7 +109,7 @@ export const getTimelineItems = (t: TFunction) => [
     },
 ]
 
-export const getProjects = (t: TFunction) => [
+export const getProjects = (t: TFunction): CardProjectProps[] => [
     {
         title: "DashowBoard",
         description: t("projetos.dashowboard.descricao"),
@@ -172,10 +173,11 @@ export const getProjects = (t: TFunction) => [
             "Cloudinary",
             "Pagar.me",
         ],
-        inDevelopment: true,
+        status: "emDesenvolvimento",
     },
     {
         title: "MiMiMi",
+        status: "congelado",
         description: t("projetos.mimimi.descricao"),
         image: "mimimi.png",
         link: {

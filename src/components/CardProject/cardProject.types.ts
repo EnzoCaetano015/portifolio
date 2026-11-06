@@ -1,3 +1,5 @@
+export type ProjectStatus = "emDesenvolvimento" | "congelado" | "emManutencao";
+
 export interface CardProjectProps {
     title: string;
     description: string;
@@ -8,6 +10,6 @@ export interface CardProjectProps {
         outro: string | null;
     };
     technologies: string[];
-    inDevelopment?: boolean;
+    status?: ProjectStatus;
     theme?: string
 }

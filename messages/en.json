@@ -63,7 +63,12 @@
             "verMais": "View More"
         },
         "status": {
-            "emDesenvolvimento": "In development"
+            "emDesenvolvimento": "In development",
+            "emDesenvolvimentoTooltip": "Project under development, not yet ready for production.",
+            "congelado": "Frozen",
+            "congeladoTooltip": "Production-ready project, offline due to limited resources to maintain hosting.",
+            "emManutencao": "Under maintenance",
+            "emManutencaoTooltip": "Project temporarily unavailable for fixes or a major update."
         }
     },
     "contato": {

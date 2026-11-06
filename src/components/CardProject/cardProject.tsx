@@ -1,9 +1,12 @@
+"use client"
+
 import Image from "next/image"
 import { Badge } from "../ui/badge"
 import { CardProjectProps } from "./cardProject.types"
 import { Button } from "../ui/button"
 import clsx from "clsx"
 import { useTranslations } from "next-intl"
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip"
 import { imageMap } from "./cardProject.utils"
 
 export const CardProject = ({
@@ -12,10 +15,17 @@ export const CardProject = ({
     image,
     link,
     technologies,
-    inDevelopment,
+    status,
     theme,
 }: CardProjectProps) => {
     const t = useTranslations()
+
+    const statusStyles = {
+        emDesenvolvimento: "border-amber-400 bg-gradient-to-r from-amber-300 to-orange-400 text-amber-950 shadow-sm",
+        congelado: "border-gray-500 bg-gradient-to-r from-gray-600 to-gray-500 text-white shadow-sm",
+        emManutencao: "border-rose-400 bg-gradient-to-r from-rose-600 to-red-500 text-white shadow-sm",
+    }
+    const canViewProject = status !== "congelado" && status !== "emManutencao"
 
     return (
         <div
@@ -52,13 +62,22 @@ export const CardProject = ({
                     ))}
                 </div>
 
-                <div className="flex flex-row gap-8 justify-center lg:justify-start">
-                    {inDevelopment && (
-                        <Badge className="border-amber-400 bg-gradient-to-r from-amber-300 to-orange-400 text-amber-950 shadow-sm">
-                            {t("projetos.status.emDesenvolvimento")}
-                        </Badge>
+                <div className="flex flex-row flex-wrap items-center gap-x-8 gap-y-4 justify-center lg:justify-start">
+                    {status && (
+                        <Tooltip>
+                            <TooltipTrigger asChild>
+                                <Badge asChild className={statusStyles[status]}>
+                                    <button type="button" className="cursor-help">
+                                        {t(`projetos.status.${status}`)}
+                                    </button>
+                                </Badge>
+                            </TooltipTrigger>
+                            <TooltipContent sideOffset={6} className="max-w-72 text-center">
+                                {t(`projetos.status.${status}Tooltip`)}
+                            </TooltipContent>
+                        </Tooltip>
                     )}
-                    {link.url && (
+                    {link.url && canViewProject && (
                         <a
                             href={link.url}
                             target="_blank"
